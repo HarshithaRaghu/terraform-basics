@@ -13,7 +13,7 @@ resource "aws_instance" "my-ec2" {
       }
 
       inline = [
-          "ansible-pull -U https://github.com/b52-clouddevops/ansible.git -e COMPONENT=mongodb -e ENV=dev robot-pull.yml"
+          "ansible-pull -U https://HarshithaRaghu/ansible.git -e COMPONENT=mongodb -e ENV=dev robot-pull.yml"
         ]
     }
 }
