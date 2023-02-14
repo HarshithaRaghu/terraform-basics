@@ -1,28 +1,28 @@
-#module "component" {
- #   for_each    = var.COMPONETS
-  #  source      = "./ec2"
-  #  COMPONENT   = each.key
-  #  APP_VERSION = each.value.APP_VERSION
-#}
+module "component" {
+    for_each    = var.COMPONETS
+    source      = "./ec2"
+    COMPONENT   = each.key
+    APP_VERSION = each.value.APP_VERSION
+}
 
 
-  module "mongodb" {
-     source      = "./ec2"
-     COMPONENT   = "mongodb"
-     APP_VERSION = "null"
- }
+ # module "mongodb" {
+  #   source      = "./ec2"
+   #  COMPONENT   = "mongodb"
+    # APP_VERSION = "null"
+ #}
 
- module "catalogue" {
-     source      = "./ec2"
-     COMPONENT   = "catalogue"
-     APP_VERSION = "0.0.16"
- }
+ # module "catalogue" {
+   #  source      = "./ec2"
+    # COMPONENT   = "catalogue"
+     #APP_VERSION = "0.0.16"
+ #}
 
 # module "redis" {
-#     source      = "./ec2"
-#     COMPONENT   = "redis"
-#     APP_VERSION = "null"
-# }
+ #    source      = "./ec2"
+  #   COMPONENT   = "redis"
+  #   APP_VERSION = "null"
+ #}
 
 # module "user" {
 #     source      = "./ec2"
