@@ -37,7 +37,8 @@ provisioner "remote-exec" {
       type     = "ssh"
       user     = "centos"
       password = "DevOps321"
-      host     = self.public_ip         # self. will only work if it's inside the resource ; If not, we need to use aws_instance.my-ec2.public_ip
+      host     = aws_instance.my-ec2.public_ip
+                                                  # self. will only work if it's inside the resource ; If not, we need to use aws_instance.my-ec2.public_ip
       }
 
       inline = [
