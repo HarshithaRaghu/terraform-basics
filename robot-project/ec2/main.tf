@@ -32,7 +32,7 @@ resource "aws_instance" "my-ec2" {
   instance_type           = "t2.micro"
   vpc_security_group_ids  = [aws_security_group.allows_all.id]
 
-  provisioner "remote-exec" {
+provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "centos"
